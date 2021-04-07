@@ -48,4 +48,4 @@ jobs:
                   PUSH_PLUS_TOKEN: ${{ github.event.client_payload.PUSH_PLUS_TOKEN || secrets.PUSH_PLUS_TOKEN }}
                   PUSH_PLUS_USER: ${{ github.event.client_payload.PUSH_PLUS_USER || secrets.PUSH_PLUS_USER }}
                   PURCHASE_SHOPS: ${{ github.event.client_payload.PURCHASE_SHOPS || secrets.PURCHASE_SHOPS }}
-                  SYNCURL: https://raw.githubusercontent.com/tubie75/jdqd/main/z_asus_iqiyi.js
+                  SYNCURL: https://raw.githubusercontent.com/GARYTEN/xxxl/main/z_asus_iqiyi.js
