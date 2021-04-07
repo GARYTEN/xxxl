@@ -6,7 +6,7 @@ name: 华硕-爱奇艺 4.11
 on:
     workflow_dispatch:
     schedule:
-        - cron: "58 0 5-12 4 *"
+        - cron: "1 0 5-12 4 *"
     watch:
         types: [started]
     repository_dispatch:
