@@ -85,7 +85,7 @@ def luckHome(cookies):
         
     }    ### 此处填充
     if not data:
-        print("需要填充 luckHome(cookies) 中的data")
+        print("pin=HHYUI444;wskey=AAJga8f0AECLfDtfImowNxzucFxwZ6FvqPOlVPHG2n2d-JNXzTTZi4xbQk_a8wl2D5RMt6ic0qY_Ex_ZvY69uqOhywNUIUri;whwswswws=o6kS/uAbFYs91T+TLvodoeVEADUjKBfSQoyczEyoMgyRhvOFyByfxCp5pH3AKrhIJBv6veu4nLD1hLo6WxBTWLg==;unionwsws={"jmafinger":"o6kS\/uAbFYs91T+TLvodoeVEADUjKBfSQoyczEyoMgyRhvOFyByfxCp5pH3AKrhIJBv6veu4nLD1hLo6WxBTWLg==","devicefinger":"eidIc56981217cs88trMR2QFRji+C+tDZecT2PLazbs2upiFbk\/edEwpbv\/8CLYc2t9y6lZIBg4GJO3G3XgYV2flLFsR4FFZf3uZtHXcJ0\/Y1wwhn5ZP"}")
         exit()
 
     response = requests.post('https://api.m.jd.com/client.action',
@@ -111,7 +111,7 @@ def exchange(cookies):
         
     }   ### 此处填充
     if not data:
-        print("需要填充 exchange(cookies) 中的data")
+        print("pin=HHYUI444;wskey=AAJga8f0AECLfDtfImowNxzucFxwZ6FvqPOlVPHG2n2d-JNXzTTZi4xbQk_a8wl2D5RMt6ic0qY_Ex_ZvY69uqOhywNUIUri;whwswswws=o6kS/uAbFYs91T+TLvodoeVEADUjKBfSQoyczEyoMgyRhvOFyByfxCp5pH3AKrhIJBv6veu4nLD1hLo6WxBTWLg==;unionwsws={"jmafinger":"o6kS\/uAbFYs91T+TLvodoeVEADUjKBfSQoyczEyoMgyRhvOFyByfxCp5pH3AKrhIJBv6veu4nLD1hLo6WxBTWLg==","devicefinger":"eidIc56981217cs88trMR2QFRji+C+tDZecT2PLazbs2upiFbk\/edEwpbv\/8CLYc2t9y6lZIBg4GJO3G3XgYV2flLFsR4FFZf3uZtHXcJ0\/Y1wwhn5ZP"}")
         exit()
 
     response = requests.post('https://api.m.jd.com/client.action',
