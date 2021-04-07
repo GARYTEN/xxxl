@@ -10,7 +10,7 @@ on:
     watch:
         types: [started]
     repository_dispatch:
-        types: jd_small_home
+        types: z_asus_iqiyi
 
 jobs:
     build:
