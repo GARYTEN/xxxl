@@ -1,7 +1,7 @@
 # This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: 店铺关注有礼
+name: monk_shop_关注有礼
 
 on:
   workflow_dispatch:
@@ -34,9 +34,9 @@ jobs:
       - name: npm install
         run: |
           npm install
-      - name: '关注有礼'
+      - name: '关注'
         run: |
-          node monk_shop_add_to_car.js 
+          node monk_shop_关注有礼.js 
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
           JD_USER_AGENT: ${{ secrets.JD_USER_AGENT }}
