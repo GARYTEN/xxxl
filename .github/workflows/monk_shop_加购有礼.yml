@@ -36,7 +36,7 @@ jobs:
           npm install
       - name: '加购有礼'
         run: |
-          node monk_shop_add_to_car.js 
+          node monk_shop_加购.js 
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
           JD_USER_AGENT: ${{ secrets.JD_USER_AGENT }}
