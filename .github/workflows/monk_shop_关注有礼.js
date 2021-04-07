@@ -36,7 +36,7 @@ jobs:
           npm install
       - name: '关注'
         run: |
-          node monk_shop_关注有礼.js 
+          node monk_shop_关注.js 
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
           JD_USER_AGENT: ${{ secrets.JD_USER_AGENT }}
