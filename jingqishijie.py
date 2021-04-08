@@ -85,7 +85,7 @@ def luckHome(cookies):
         
     }    ### 此处填充
     if not data:
-        print("需要填充 luckHome(cookies) 中的data")
+        print("pin=%E6%B8%85%E5%90%9B-%E6%98%9F%E6%BA%90%E6%97%A5%E7%84%B6;wskey=AAJgbs-iAFD2Z5mhyJbX0zx3X5BjWuKBxV7f-427Gi0v8uZT2Chv7aaugiW0sM4NllqxZgCVEy5BlfVF0s0_s3EBpbGQVRA1Cb_uXL8_jg10VeFUxl1_5g;whwswswws=dt3bb1Gz2swwaLMpS7ysX/jpVAkRcyZotep/BMGI3J3csrZD6dtNxFvXqEhROx8OeN6VsfmZPi0KH6nkVPsjtOg==;unionwsws={"jmafinger":"dt3bb1Gz2swwaLMpS7ysX\/jpVAkRcyZotep\/BMGI3J3csrZD6dtNxFvXqEhROx8OeN6VsfmZPi0KH6nkVPsjtOg==","devicefinger":"eidI9c3f812045s68jwToyIkSV2kGCz2e3\/uLvI8FRIZ+Et+MuBUu+nA8kexznBBQ6PGo3pZ0+fW16F47Va3Cp1XlVL+\/eBMdNMsYcI2IsIuEWQVB9NN"}")
         exit()
 
     response = requests.post('https://api.m.jd.com/client.action',
@@ -111,7 +111,7 @@ def exchange(cookies):
         
     }   ### 此处填充
     if not data:
-        print("需要填充 exchange(cookies) 中的data")
+        print("pin=%E6%B8%85%E5%90%9B-%E6%98%9F%E6%BA%90%E6%97%A5%E7%84%B6;wskey=AAJgbs-iAFD2Z5mhyJbX0zx3X5BjWuKBxV7f-427Gi0v8uZT2Chv7aaugiW0sM4NllqxZgCVEy5BlfVF0s0_s3EBpbGQVRA1Cb_uXL8_jg10VeFUxl1_5g;whwswswws=dt3bb1Gz2swwaLMpS7ysX/jpVAkRcyZotep/BMGI3J3csrZD6dtNxFvXqEhROx8OeN6VsfmZPi0KH6nkVPsjtOg==;unionwsws={"jmafinger":"dt3bb1Gz2swwaLMpS7ysX\/jpVAkRcyZotep\/BMGI3J3csrZD6dtNxFvXqEhROx8OeN6VsfmZPi0KH6nkVPsjtOg==","devicefinger":"eidI9c3f812045s68jwToyIkSV2kGCz2e3\/uLvI8FRIZ+Et+MuBUu+nA8kexznBBQ6PGo3pZ0+fW16F47Va3Cp1XlVL+\/eBMdNMsYcI2IsIuEWQVB9NN"}")
         exit()
 
     response = requests.post('https://api.m.jd.com/client.action',
