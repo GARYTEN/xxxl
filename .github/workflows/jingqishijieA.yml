@@ -1,8 +1,8 @@
-name: 惊奇世AAAAAAAAA
+name: 东东农场世界
 
 on:
   schedule:
-    - cron: '*/30 * * * * '
+    - cron: '30 3,9,15,16,22 * * * '
   watch:
     types: [started]
 jobs:
@@ -20,8 +20,11 @@ jobs:
       - name: 'Install requirements'
         run: pip install -r ./requirements.txt 
         
-      - name: 'run 喜马拉雅极速版' 
+      - name: 'run 东东农场' 
         run: python3 jingqishijie.py 
-        #env:
-           # XMLY_SPEED_COOKIE: ${{ secrets.XMLY_SPEED_COOKIE }}
+        env:
+            JD_COOKIE: ${{ secrets.JD_COOKIE }}
+            SCKEY: ${{ secrets.SCKEY }}
+            BARK: ${{ secrets.BARK }}
+     
     
