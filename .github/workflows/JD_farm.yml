@@ -1,4 +1,4 @@
-name: 京东庄园
+name: 京东农场🍉
 
 on:
   workflow_dispatch:
@@ -23,7 +23,7 @@ jobs:
       - name: npm install
         run: |
           npm install
-      - name: '运行 【京东庄园】'
+      - name: '运行 【京东农场🍉】'
         run: |
           node JD_farm.js
         env:
