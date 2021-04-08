@@ -1,4 +1,4 @@
-name: 京东到家-到家果园
+name: 京东果园
 
 on:
   workflow_dispatch:
@@ -23,7 +23,7 @@ jobs:
       - name: npm install
         run: |
           npm install
-      - name: '运行 【京东到家-到家果园】'
+      - name: '运行 【京东果园】'
         run: |
           node JD_fruit.js
         env:
