@@ -1,4 +1,4 @@
-name: 京享值PK
+name: 京享值PK👊
 
 on:
     workflow_dispatch:
@@ -7,7 +7,7 @@ on:
     watch:
         types: [started]
     repository_dispatch:
-        types: adolf_pk
+        types: monk_pk
 
 jobs:
     build:
@@ -23,7 +23,7 @@ jobs:
             - name: npm install
               run: |
                   npm install
-            - name: "运行【京享值PK】"
+            - name: "运行【京享值PK👊】"
               run: |
                   node onlyOneExecute.js
               env:
