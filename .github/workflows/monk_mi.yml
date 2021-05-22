@@ -6,7 +6,7 @@ name: monk_mi🐒
 on:
   workflow_dispatch:
   schedule:
-    - cron: '8 0-23/12 * * *'
+    - cron: '20 9 21-27 5 *'
   repository_dispatch:
     types: adolf_mi
 jobs:
