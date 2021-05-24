@@ -6,7 +6,7 @@ name: monk_人头马🐎（05-31）
 on:
   workflow_dispatch:
   schedule:
-    - cron: '8 0-23/12 * * *'
+    - cron: '20 9 20-31 5 *'
   repository_dispatch:
     types: adolf_martin
 jobs:
