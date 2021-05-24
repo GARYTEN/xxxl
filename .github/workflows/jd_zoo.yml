@@ -6,7 +6,7 @@ name: 动物园🐂🐒🐎
 on:
   workflow_dispatch:
   schedule:
-    - cron: '20 9 21-27 5 *'
+    - cron: '5 * * * *'
   repository_dispatch:
     types: 动物联盟
 jobs:
