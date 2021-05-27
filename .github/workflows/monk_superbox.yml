@@ -6,7 +6,7 @@ name: monk_超级盒子
 on:
   workflow_dispatch:
   schedule:
-    - cron: '20 9 21-27 5 *'
+    - cron: '15 9,20 * 5,6 *'
   repository_dispatch:
     types: monk_superbox
 jobs:
