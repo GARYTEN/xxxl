@@ -6,7 +6,7 @@ name: 总裁送好礼👨
 on:
   workflow_dispatch:
   schedule:
-    - cron: '20 9 21-27 5 *'
+    - cron: '30 9,10 * * *'
   repository_dispatch:
     types: babelDiy
 jobs:
