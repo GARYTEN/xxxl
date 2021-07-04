@@ -8,7 +8,7 @@ function diycron(){
     
     # 修改docker_entrypoint.sh执行频率
     ln -sf /usr/local/bin/docker_entrypoint.sh /usr/local/bin/docker_entrypoint_mix.sh
-    echo "18 */1 * * * docker_entrypoint_mix.sh >> /scripts/logs/default_task.log 2>&1" >> /scripts/docker/merged_list_file.sh
+    echo "18,48 */1 * * * docker_entrypoint_mix.sh >> /scripts/logs/default_task.log 2>&1" >> /scripts/docker/merged_list_file.sh
     # 京喜财富岛提现
     echo "59 23 * * * sleep 59; node /scripts/jx_cfdtx.js >> /scripts/logs/jx_cfdtx.log 2>&1" >> /scripts/docker/merged_list_file.sh
     #收集助力码
@@ -40,6 +40,36 @@ function jddj_diy(){
         git -C /jddj_diy pull origin main --rebase
     fi  
     cp -f /jddj_diy/jddj_*.js /scripts
+}
+
+function didi_diy(){
+    ## 克隆jddj_diy仓库
+    if [ ! -d "/didi_diy/" ]; then
+        echo "未检查到克隆didi_diy仓库，初始化下载相关脚本..."
+        git clone -b main https://github.com/passerby-b/didi_fruit.git /didi_diy
+    else
+        echo "更新didi_diy脚本相关文件..."
+        git -C /didi_diy reset --hard
+        git -C /didi_diy pull origin main --rebase
+    fi  
+       #rm -rf /jddj_diy/sendNotify.js
+       cp -f /didi_diy/dd_*.js /scripts
+       
+       #滴滴果园
+       echo "10 0,8,12,18 * * * node /scripts/dd_fruit.js >> /scripts/logs/dd_fruit.js.log 2>&1" >> /scripts/docker/merged_list_file.sh
+}
+
+# 下载龙猪猪 红包雨脚本
+function longzhuzhu_diy(){
+    if [ ! -d "/longzhuzhu/" ]; then
+        echo "未检查到longzhuzhu仓库脚本，初始化下载相关脚本..."
+        git clone -b main https://github.com/longzhuzhu/nianyu.git /longzhuzhu
+    else
+        echo "更新longzhuzhu脚本相关文件..."
+        git -C /longzhuzhu reset --hard
+        git -C /longzhuzhu pull origin main --rebase
+    fi
+    cp -f /longzhuzhu/qx/*_*.js /scripts
 }
 
 
@@ -96,6 +126,23 @@ function wuzhi_diy(){
     sed -i "s/jx_cfdtx.js/jx_cfdtx_bak.js/g" /scripts/docker/merged_list_file.sh
 }
 
+# 京喜牧场
+function moposmall_diy(){
+     if [ ! -d "/moposmall/" ]; then
+        echo "未检查到moposmall仓库脚本，初始化下载相关脚本..."
+        git clone -b main https://github.com/moposmall/Script.git /moposmall
+    else
+        echo "更新moposmall脚本相关文件..."
+        git -C /moposmall reset --hard
+        git -C /moposmall pull origin main --rebase
+    fi
+    cp -f /moposmall/Me/jx_*.js /scripts
+    
+    # 京喜牧场
+    echo "10 0,12,22 * * * node /scripts/jx_mc.js >> /scripts/logs/jx_mc.log 2>&1" >> /scripts/docker/merged_list_file.sh
+    echo "10 * * * * node /scripts/jx_mc_coin.js >> /scripts/logs/jx_mc_coin.log 2>&1" >> /scripts/docker/merged_list_file.sh
+}
+
 # Wenmoux_diy
 function Wenmoux_diy(){
     if [ ! -d "/Wenmoux/" ]; then
@@ -111,6 +158,22 @@ function Wenmoux_diy(){
     echo "59 9 * * * node /scripts/jd_europeancup.js >> /scripts/logs/jd_europeancup.log 2>&1" >> /scripts/docker/merged_list_file.sh
     echo "28 7 * * * node /scripts/jd_SplitRedPacket.js >> /scripts/logs/jd_SplitRedPacket.log 2>&1" >> /scripts/docker/merged_list_file.sh
     echo "25 7 * * * node /scripts/jd_ddnc_farmpark.js >> /scripts/logs/jd_ddnc_farmpark.log 2>&1" >> /scripts/docker/merged_list_file.sh
+}
+
+# star261
+function star261_diy(){
+     if [ ! -d "/star261/" ]; then
+        echo "未检查到star261仓库脚本，初始化下载相关脚本..."
+        git clone -b main https://github.com/star261/jd.git /star261
+    else
+        echo "更新star261脚本相关文件..."
+        git -C /star261 reset --hard
+        git -C /star261 pull origin main --rebase
+    fi
+    cp -f /star261/scripts/*_*.js /scripts
+    
+     echo "10 1,13,21 * * * node /scripts/jd_jxmc.js >> /scripts/logs/jd_jxmc.log 2>&1" >> /scripts/docker/merged_list_file.sh
+
 }
 
 
@@ -143,12 +206,16 @@ function main(){
     wuzhi_diy
     # 京东到家
     jddj_diy
+    didi_diy
+    star261_diy
     # 柠檬
     panghu_diy
+    longzhuzhu_diy
     # 柠檬_jd
     #panghu999_jd_diy
     # Wenmoux
-    # Wenmoux_diy
+    Wenmoux_diy
+    moposmall_diy
     #hyzaw_diy
     # 判断外网IP,运行自己的代码
     curl icanhazip.com > ./ipstr.txt
