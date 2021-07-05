@@ -1,7 +1,5 @@
 #!/bin/sh
 
-
-
 function diycron(){
     for jsname in /scripts/ddo_*.js /scripts/jd_*.js /scripts/long_*.js; do
         jsnamecron="$(cat $jsname | grep -oE "/?/?cron \".*\"" | cut -d\" -f2)"
@@ -36,7 +34,6 @@ function jd_diy(){
 }
 
 
-
 function hyzaw_diy(){
     ## 克隆hyzawr仓库
     if [ ! -d "/hyzaw/" ]; then
@@ -66,6 +63,7 @@ function jddj_diy(){
        cp -f /jddj_diy/jddj_*.js /scripts
        cp -f /scripts/logs/jddj_cookie.js /scripts
 }
+
 
 # 下载龙猪猪 红包雨脚本
 function longzhuzhu_diy(){
